@@ -1,0 +1,82 @@
+<html>
+<meta charset="utf-8">
+<head>
+  <title> Ficha Cadastral </title>
+</head>
+<style>
+h1 {
+  text-align: center;
+  color: darkgray;
+  font-style: arial;
+  font-size: 28;
+}
+
+.documento{
+float: left;
+}
+.gn{
+
+}
+.button {
+text-align: center;
+
+}
+</style>
+<body>
+<h1> Ficha Cadastral </h1>
+<form method="post" action="cadastral.html">
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+    <div class="nome">
+      <label>Nome:
+        <input type="text" name="nome" size="100" placeholder="Digite o seu nome completo"/>
+      </label>
+    </div>
+    <br/>
+    <div class="documento">
+      <label>RG:
+        <input type="number" name="RG" size="40" placeholder="Digite o seu RG"/>
+      </label>
+      <label>CPF:
+        <input type="number" name="CPF" size="40" placeholder="Digite o seu CPF"/>
+      </label>
+    </div>
+    <br/>
+    <div class="Endereço">
+      <label>Endereço:
+        <input type="text" name="Endereço" size="100" placeholder="Digite o seu Endereço"/>
+      </label>
+    </div>
+    <div class="gn">
+    <form method="post" action="genero.jsp">
+      <p>Gênero:
+        <br/>
+        <select name="Gênero">
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+        </select>
+      </p>
+    </form>
+    <label>Data de Nascimento:
+      <input type="date" name="Data" size="40" placeholder="Digite sua data de Nascimento"/>
+    </label>
+  </div>
+  <br/>
+  <div class="Situação Civil">
+    <form method="post" action="estado.jsp">
+      Situação Civil:
+      <br/>
+      <input id="Solteiro(a)" type="radio" name="estado civil" value="s" checked/>
+      <label for="Solteiro(a)">Solteiro(a)</label>
+      <input id="Casado(a)" type="radio" name="estado civil" value="c"/>
+      <label for="Casado(a)">Casado(a)</label>
+      <input id="Viúvo(a)" type="radio" name="estado civil" value="v"/>
+      <label for="Viúvo(a)">Viúvo(a)</label>
+    </form>
+  </div>
+  <div class="button">
+    <button> Cadastrar </button>
+    </div>
+  </fieldset>
+</body>
+</html>
